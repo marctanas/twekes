@@ -13,20 +13,27 @@
 
     <body>
       <nav>
-        <div class="navbar">
-            <div id="logo">
+          <div class="navbar">
+            <div class="logo">
                 <a href="https://www.twekes.com">
                 <img src="./assets/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
                 </a>
             </div>
-            <div id="links">
+            <div class="links">
                 <a href="">How It works</a>
                 <a href="">Blog</a>
                 <a href="">Sign Up</a>
                 <a href="">Login</a>
-             </div>
-        </div>
-      </nav>
+            </div>
+            <i class="material-icons menu" onclick="menu()">menu</i>
+            </div>
+            <div class="dropdown">
+                <a href="">How It works</a>
+                <a href="">Blog</a>
+                <a href="">Sign Up</a>
+                <a href="">Login</a>
+            </div>
+        </nav>
 
         <div class="content">
             <p>
@@ -62,4 +69,31 @@
         </div>
       </div>
     </body>
+
+    <script>
+        var dropdown = document.querySelector("nav .dropdown");
+        var button = document.querySelector("nav .menu");
+
+        function menu(){
+            if (dropdown.style.display ==="grid"){
+                dropdown.style.display = "none";
+                button.innerHTML = "menu";
+            }
+            else {
+                dropdown.style.display = "grid";
+                button.innerHTML = "close";
+            }
+        }
+
+        addEventListener("resize", function(){
+            if (window.innerWidth > 700){
+                dropdown.style.display = "none";
+                button.innerHTML = "menu";
+            }
+            else{
+
+            }
+        })
+
+    </script>
 </html>
