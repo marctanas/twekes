@@ -10,71 +10,186 @@
               content="twekes, twekes shop, jointwekes, free, shop, coupons, cash back, rewards, promo code, free cash, discounts, loyalty,"/>
         <meta name="description"
               content="Twekes is a rewards platform that gives you cash back when you shop online."/>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Statickic html form-->
+        <script defer src="https://js.statickit.com/statickit.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Google icons-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+        <!-- Core CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
     </head>
 
     <body>
-      <nav>
-          <div class="navbar">
-            <div class="logo">
-                <a href="https://www.twekes.com">
-                <img src="./assets/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-                </a>
-            </div>
-            <div class="links">
-                <a href="">How It works</a>
-                <a href="">Blog</a>
-                <a href="">Sign Up</a>
-                <a href="">Login</a>
-            </div>
-            <i class="material-icons menu" onclick="menu()">menu</i>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="https://www.twekes.com">
+                    <img src="./assets/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
+                    </a>
+                </div>
+                <div class="links">
+                    <a href="#howitworks">How It works</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="signup.html">Sign Up</a>
+                    <a href="login.htm">Login</a>
+                </div>
+                <i class="material-icons menu" onclick="menu()">menu</i>
             </div>
             <div class="dropdown">
-                <a href="">How It works</a>
-                <a href="">Blog</a>
-                <a href="">Sign Up</a>
-                <a href="">Login</a>
+                <a href="#howitworks">How It works</a>
+                <a href="blog.html">Blog</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="./login.htm">Login</a>
             </div>
         </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0">Your rewards effortlessly accessible</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Automatic cashback when you shop online</h2>
+                    <form class="form-inline d-flex">
+                        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Sign up today with your email" />
+                        <button class="btn btn-primary mx-auto" type="submit">Claim your $5</button>
+                    </form>
+                </div>
+                <!-- <form id="my-form">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" value="" required />
+                    <button type="submit">Claim your $5</button>
+                  </form>
+                  <script>
+                    window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
+                    sk('form', 'init', {
+                      site: '27ab2bc1ce80',   // found under the Settings tab
+                      form: '{your-form-key}',  // the key used in statickit.json
+                      element: '#my-form'       // a selector pointing to the `<form>` element
+                    });
+                  </script>
+                  <script defer src="https://js.statickit.com/statickit.js"></script> -->
+            </div>
+        </header>
 
-        <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quia, eos, recusandae ea laudantium fugit quam eius, sint blanditiis voluptatem nemo cumque voluptas accusantium eveniet aspernatur quis ipsum? Temporibus, provident.
-            </p>  
-            <br>
-            <br>
-        </div>
+        <hr class="m-0" />
 
-        <div class="footer">
-            <div id="copyright">
-                <script>document.write(new Date().getFullYear());</script> &copy; Twekes Technology Inc. All Rights Reserved 
+        <!-- How it works-->
+        <div class="about-section" id="howitworks">
+            <div class="container">
+                <h2 class="h4 text-center mt-0 ">Using Twekes is easy</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">1</h3>
+                            <p class="mb-0">Install Twekes browser extension</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">2</h3>
+                            <p class="mb-0">Shop & spend at one of our partner's stores and </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <h3 class="h4 mb-2">3</h3>
+                            <p class="mb-0">Receive automatic cashback when you checkout with Twekes!</p>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <hr class="m-0" />
+
+                <!-- Benefits-->
+                <div class="about-section">
+                    <h2 class="h4 text-center mt-0 ">Benefits</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <h3 class="mb-0">
+                                    <li>Integrates seamlessly with your browser</li>
+                                    <li>One click to activate your cashback</li>
+                                    <li>No expiry to your cash back</li>
+                                    <li>Personalized experience</li>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <hr class="m-0" />
+
+                <!-- List of Merchants-->
+                <div class="about-section">
+                    <h2 class="h4 text-center mt-0">list of merchants</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <h3 class="mb-0">logos of some merchants</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="m-0" />
+
+                <!-- Website extension-->
+                <div class="about-section">
+                    <h2 class="h4 text-center mt-0">Try Twekes in your browser</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <h3 class="mb-0">Download our website extension</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr class="m-0" />
+
+                <!-- Social Media links-->
+                <div class="about-section">
+                    <h2 class="h4 text-center mt-0">Follow us on</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="social-icons">
+                                    <a class="social-icon" href="https://www.instagram.com/jointwekes/" target="/blank"><i class="fab fa-instagram" target="/blank"></i></a><a class="social-icon" href="https://twitter.com/jointwekes" target="/blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.facebook.com/twekes" target="/blank"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </body>
+
+
+
+        <!-- Footer-->
+        <footer>
+            <div class="footerarea">
+                <div class="footerlinks">
+                    <a href="#">About</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="copyright">
+                    <script>document.write(new Date().getFullYear());</script> &copy; Twekes Technology Inc. All Rights Reserved
+                </div>
+             </div>
+        </footer>
+
 
     <script>
 
@@ -101,6 +216,7 @@
 
             }
         })
-
     </script>
+
+    </body>
 </html>
