@@ -35,10 +35,18 @@
                     </a>
                 </div>
                 <div class="links">
-                    <a href="#howitworks">How It works</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="signup.html">Sign Up</a>
-                    <a href="login.htm">Login</a>
+                    <div class="howitworkslink">
+                        <a href="#howitworks">How It works</a>
+                    </div>
+                    <div class="bloglink">
+                        <a href="blog.html">Blog</a>
+                    </div>
+                    <div class="signuplink">
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                    <div class="loginlink">
+                        <a href="login.htm">Login</a>
+                    </div>
                 </div>
                 <i class="material-icons menu" onclick="menu()">menu</i>
             </div>
@@ -55,25 +63,17 @@
                 <div class="mx-auto text-center">
                     <h1 class="mx-auto my-0">Your rewards effortlessly accessible</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Automatic cashback when you shop online</h2>
-                    <form class="form-inline d-flex">
-                        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Sign up today with your email" />
-                        <button class="btn btn-primary mx-auto" type="submit">Claim your $5</button>
-                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <!-- <label for="email">Email</label> -->
+                        <input type="email" id="email" placeholder="Sign up today" name="email">
+                        <!-- <label for="pwd">Password:</label>
+                        <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+                        <label>
+                          <input type="checkbox" name="remember"> Remember me
+                        </label> -->
+                        <button type="submit">Claim your $5</button>
+                      </form> 
                 </div>
-                <!-- <form id="my-form">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" value="" required />
-                    <button type="submit">Claim your $5</button>
-                  </form>
-                  <script>
-                    window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
-                    sk('form', 'init', {
-                      site: '27ab2bc1ce80',   // found under the Settings tab
-                      form: '{your-form-key}',  // the key used in statickit.json
-                      element: '#my-form'       // a selector pointing to the `<form>` element
-                    });
-                  </script>
-                  <script defer src="https://js.statickit.com/statickit.js"></script> -->
             </div>
         </header>
 
