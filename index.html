@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Twekes | Earn When You Shop Online</title>
         <meta name="keywords"
               content="twekes, twekes shop, jointwekes, free, shop, coupons, cash back, rewards, promo code, free cash, discounts, loyalty,"/>
         <meta name="description"
               content="Twekes is a rewards platform that gives you cash back when you shop online."/>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Statickic html form-->
-        <script defer src="https://js.statickit.com/statickit.js"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
@@ -21,202 +17,155 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Google icons-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Core CSS-->
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-    </head>
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 
+    </head>
     <body>
-        <nav>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="https://www.twekes.com">
-                    <img src="./assets/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-                    </a>
-                </div>
-                <div class="links">
-                    <div class="howitworkslink">
-                        <a href="#howitworks">How It works</a>
-                    </div>
-                    <div class="bloglink">
-                        <a href="blog.html">Blog</a>
-                    </div>
-                    <div class="signuplink">
-                        <a href="signup.html">Sign Up</a>
-                    </div>
-                    <div class="loginlink">
-                        <a href="login.htm">Login</a>
-                    </div>
-                </div>
-                <i class="material-icons menu" onclick="menu()">menu</i>
-            </div>
-            <div class="dropdown">
-                <a href="#howitworks">How It works</a>
-                <a href="blog.html">Blog</a>
-                <a href="signup.html">Sign Up</a>
-                <a href="./login.htm">Login</a>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container d-flex h-100 align-items-center">
-                <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0">Your rewards effortlessly accessible</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Automatic cashback when you shop online</h2>
-                    <form class="form-inline" action="/action_page.php">
-                        <!-- <label for="email">Email</label> -->
-                        <input type="email" id="email" placeholder="Sign up today" name="email">
-                        <!-- <label for="pwd">Password:</label>
-                        <input type="password" id="pwd" placeholder="Enter password" name="pswd">
-                        <label>
-                          <input type="checkbox" name="remember"> Remember me
-                        </label> -->
-                        <button type="submit">Claim your $5</button>
-                      </form> 
-                </div>
-            </div>
+        <header>
+            <h2><a href="https://www.twekes.com">
+                <img src="img/twekeslogo.png" width="130" height="40" alt="twekes"/>
+                </a></h2>
+            <nav>
+                <li class="howitworkslink"><a href="#howitworks">How it Works</a></li>
+                <li class="bloglink"><a href="#">Blog</a></li>
+                <li class="signuplink"><a href="#">Sign up</a></li>
+                <li class="loginlink"><a href="#">Login</a></li>
+            </nav>
         </header>
 
-        <hr class="m-0" />
+        <!--Full background image, headings, button-->
+        <section class="one">
+            <div class="background-image" style="background-image: url(img/happyorder.jpeg)"> </div>
+            <h1>
+                Your rewards effortlessly accessible
+            </h1>
+            <h3>
+                Automatic cashback when you shop online
+            </h3>
+            <form>
+                <input type="email" placeholder="Sign up today">
+                <a href="#" class="btn">Claim your $5</a>
+             </form>
+            <!-- <a href="#" class="btn">
+                Claim your $5
+            </a> -->
+        </section>
+        <!-- END Full background image, headings, button-->
 
-        <!-- How it works-->
-        <div class="about-section" id="howitworks">
-            <div class="container">
-                <h2 class="h4 text-center mt-0 ">Using Twekes is easy</h2>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h4 mb-2">1</h3>
-                            <p class="mb-0">Install Twekes browser extension</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h4 mb-2">2</h3>
-                            <p class="mb-0">Shop & spend at one of our partner's stores and </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h4 mb-2">3</h3>
-                            <p class="mb-0">Receive automatic cashback when you checkout with Twekes!</p>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
+        <!--Section How It Works-->
+        <section class="features" id="howitworks">
+            <h3 class="title">Using twekes is easy</h3>
+            <ul class="grid">
+                <li>
+                    <i class="fas fa-stream fa-4x"></i>
+                    <h4><br>Activate<br></h4>
+                    <p>Install Twekes website browser for easy code activation</p>
+                </li>
+                <li>
+                    <i class="fas fa-shopping-basket fa-4x"></i>
+                    <h4><br>Shop<br></h4>
+                    <p>Shop & spend online</p>
+                </li>
+                <li>
+                    <i class="fas fa-percent fa-4x"></i>
+                    <h4><br>Earn<br></h4>
+                    <p>Receive automatic cashback when you checkout with Twekes!</p>
+                </li> 
+            </ul>
+        </section>
+        <!-- END Section How It Works-->
 
-                <hr class="m-0" />
-
-                <!-- Benefits-->
-                <div class="about-section">
-                    <h2 class="h4 text-center mt-0 ">Benefits</h2>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 text-center">
-                            <div class="mt-5">
-                                <h3 class="mb-0">
-                                    <li>Integrates seamlessly with your browser</li>
-                                    <li>One click to activate your cashback</li>
-                                    <li>No expiry to your cash back</li>
-                                    <li>Personalized experience</li>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <hr class="m-0" />
-
-                <!-- List of Merchants-->
-                <div class="about-section">
-                    <h2 class="h4 text-center mt-0">list of merchants</h2>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 text-center">
-                            <div class="mt-5">
-                                <h3 class="mb-0">logos of some merchants</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="m-0" />
-
-                <!-- Website extension-->
-                <div class="about-section">
-                    <h2 class="h4 text-center mt-0">Try Twekes in your browser</h2>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 text-center">
-                            <div class="mt-5">
-                                <h3 class="mb-0">Download our website extension</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!--Section Benefits-->
+        <section class="features">
+            <!-- <hr> -->
+            <h3 class="title">Benefits</h3>
+            <ul class="grid">
+                <li>
+                    <i class="fa fa-camera-retro fa-4x"></i>
+                    <<h4><br></h4>
+                    <p>Integrates seamlessly with your browser</p>
+                </li>
+                <li>
+                    <i class="fas fa-globe fa-4x"></i>
+                    <h4><br></h4>
+                    <p>Providing the best discount code to use</p>
+                </li>
+                <li>
+                    <i class="fas fa-fan fa-4x"></i>                    
+                    <h4><br></h4>
+                    <p>No expiry to your cashback</p>
+                </li> 
+            </ul>
+        </section>
+        <!-- END Section Benefits-->
 
 
-                <hr class="m-0" />
+        <!--Section Sample Merchants-->
+         <section class="our-merchants">
+            <!-- <hr> -->
+            <h3 class="title">Some of our Merchants</h3>
+            <p>Earn up to XX% in cashback rewards
+            </p>
+            <ul class="grid">
+                <li class="large" style="background-image: url(img/samplemerchants.png)"></li>
+                <!-- <li class="large" style="background-image: url(img/island.jpg)"></li>
+                <li class="large" style="background-image: url(img/balloon.jpg)"></li>
+                <li class="small" style="background-image: url(img/mountain.jpg)"></li> -->
+            </ul>
+        </section> 
+        <!-- END Section Sample Merchants -->
 
-                <!-- Social Media links-->
-                <div class="about-section">
-                    <h2 class="h4 text-center mt-0">Follow us on</h2>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 text-center">
-                            <div class="mt-5">
-                                <div class="social-icons">
-                                    <a class="social-icon" href="https://www.instagram.com/jointwekes/" target="/blank"><i class="fab fa-instagram" target="/blank"></i></a><a class="social-icon" href="https://twitter.com/jointwekes" target="/blank"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.facebook.com/twekes" target="/blank"><i class="fab fa-facebook-f"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Section Reviews-->
+        <!-- <section class="reviews">
+            <h3 class="title">What others say:</h3>
+            <p class="quote">Quote 1</p>
+            <p class="author">— Author 1</p>
+            <p class="quote">Quote 2</p>
+		    <p class="author">— Author 2</p>
+		    <p class="quote">Quote 3</p>
+		    <p class="author">— Author 3</p>
+        </section>  -->
+        <!-- END Section Reviews-->
 
+        <!--Section Website Extension-->
+        <section class="webextension">
+            <!-- <hr> -->
+            <h3 class="title">
+                Try Twekes in your browser
+            </h3>
+            <p>
+                Start earning when you shop online
+            </p>
+            <a href="#" class="btn">
+                Download it here
+            </a>
+        </section>
+        <!-- END Section Website Extension-->
 
-
-        <!-- Footer-->
         <footer>
-            <div class="footerarea">
-                <div class="footerlinks">
-                    <a href="#">About</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Terms &amp; Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Blog</a>
-                </div>
-                <div class="copyright">
-                    <script>document.write(new Date().getFullYear());</script> &copy; Twekes Technology Inc. All Rights Reserved
-                </div>
-             </div>
+            <ul>
+                <p>Follow us on</p>
+            </ul>
+            <ul class="socialmedia">
+                <li><a href="https://twitter.com/jointwekes" target="/blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://www.facebook.com/twekes" target="/blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="copyright">
+                <script>document.write(new Date().getFullYear());</script> &copy; Twekes Technology Inc. All Rights Reserved
+            </ul>
         </footer>
-
-
-    <script>
-
-        var dropdown = document.querySelector("nav .dropdown");
-        var button = document.querySelector("nav .menu");
-
-        function menu(){
-            if (dropdown.style.display ==="grid"){
-                dropdown.style.display = "none";
-                button.innerHTML = "menu";
-            }
-            else {
-                dropdown.style.display = "grid";
-                button.innerHTML = "close";
-            }
-        }
-
-        addEventListener("resize", function(){
-            if (window.innerWidth > 700){
-                dropdown.style.display = "none";
-                button.innerHTML = "menu";
-            }
-            else{
-
-            }
-        })
-    </script>
-
     </body>
+    
 </html>
