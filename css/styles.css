@@ -331,10 +331,14 @@ header nav li:last-child{
 }
 
 @media (max-width: 1000px){
+    .our-merchants .grid li{
+        height: 200px;
+    }
     .our-merchants .grid li.small,
     .our-merchants .grid li.large{
-        flex-basis:100%;
+        flex-basis:80%;
     }
+
 }
 
 /* END Our sample merchants */
@@ -342,10 +346,11 @@ header nav li:last-child{
 
 /* Section FOUR */
 /* START reviews*/
-/*
+
 .reviews {
-    background-color: #fff;
+	background-color: #f7f7f7;
 }
+
 .reviews .quote{
     text-align: center;
     width: 80%;
@@ -355,13 +360,25 @@ header nav li:last-child{
     margin-bottom: 20px;
     padding:0;
 }
+
 .reviews .author {
     font-size: 18px;
     margin-bottom: 50px;
 }
+
 .reviews .author:last-child{
     margin-bottom: 0;
 }
+
+.reviews a.btn {
+    padding: 20px 46px;
+}
+
+.reviews a.btn:hover{
+    color: var(--yellowhover);
+}
+
+
 @media (max-width: 1000px){
     .reviews.quote{
         font-size:20px;
@@ -370,14 +387,14 @@ header nav li:last-child{
         font-size: 16px;
     }
 }
-*/
+
 /* END reviews */
 
 /* Section FIVE */
 /* START Download Website Extension */
 
 .webextension{
-	background-color: #f7f7f7;
+    background-color: #fff;
 }
 
 .webextension a.btn {
