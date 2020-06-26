@@ -11,29 +11,36 @@
         <meta name="description"
               content="Twekes is a rewards platform that gives you cash back when you shop online."/>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
         <!-- Google icons-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Core CSS-->
         <link rel="stylesheet" href="css/styles.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168116907-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-168116907-1');
+        </script>
+        
     </head>
+
     <body>
         <header>
             <h2><a href="https://www.twekes.com">
                 <img src="img/twekeslogo.png" width="130" height="40" alt="twekes"/>
                 </a></h2>
             <nav>
-                <li class="howitworkslink"><a href="#howitworks">How it Works</a></li>
-                <li class="bloglink"><a href="#">Blog</a></li>
-                <li class="signuplink"><a href="#">Sign up</a></li>
-                <li class="loginlink"><a href="#">Login</a></li>
+                <ul>
+                    <li class="howitworkslink"><a href="#howitworks">How it Works</a></li>
+                    <li class="bloglink"><a href="https://blog.twekes.com" target="_blank">Blog</a></li>
+                    <li class="signuplink"><a href="#">Sign up</a></li>
+                    <li class="loginlink"><a href="#">Login</a></li>
+                </ul>
             </nav>
         </header>
 
@@ -46,10 +53,17 @@
             <h3>
                 Automatic coupons & cashback when you shop online
             </h3>
-            <form>
+            <div class="InputAddOn">
+                <!-- <span class="InputAddOn-item">email</span> -->
+                <!-- <span class="InputAddOn-item material-icons">email</span> -->
+                <input class="InputAddOn-field" placeholder="Sign up today">
+                <button class="InputAddOn-item">Claim your $5</button>
+            </div>
+
+            <!-- <form>
                 <input type="email" placeholder="Sign up today">
                 <a href="#" class="btn">Claim your $5</a>
-             </form>
+             </form> -->
         </section>
         <!-- END Full background image, headings, button-->
 
