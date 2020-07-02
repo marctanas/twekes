@@ -157,7 +157,7 @@ header nav ul li:last-child{
         margin-bottom: 15px;
     }
 
-    header nav li.howitworkslink, li.signuplink{
+    header nav li.howItWorksLink, li.faqLink, li.signupLink{
         display: none;
     }
 }
@@ -274,8 +274,6 @@ header nav ul li:last-child{
 .one a.btn:hover{
     color: var(--yellowhover);
 }
-
-
 
 @media (max-width: 800px){
     .one {
@@ -478,6 +476,57 @@ header nav ul li:last-child{
 }
 
 /* END Download Website Extension */
+
+
+
+
+/* noMasterImage section */
+.noMasterImage {
+    position: relative;
+    justify-content: center;
+    min-height: .5vh;
+    color: #fff;
+    text-align: center;
+}
+
+.noMasterImage .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-size: cover;
+    background-color: var(--bluebackground);
+    z-index: -1;
+}
+
+/* END noMasterImage section */
+
+
+/* ---- FOR THE DIFFERENT SITE LINKS ---- */
+/* START Section Area of Sites */
+.titleArea {
+	background-color: #f7f7f7;
+}
+
+.secondArea{
+    background-color: white;
+}
+
+.descriptionArea{
+    text-align: center;
+    width: 80%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding:0;
+}
+
+/* END Section Area of Sites */
+
+/* ---- FOR THE DIFFERENT SITE LINKS ---- */
+
 
 
 /*Footer*/
