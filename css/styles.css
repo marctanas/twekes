@@ -175,7 +175,7 @@ header nav ul li:last-child{
     text-align: center;
 }
 
-.one .background-image{
+.one .backgroundImage{
     position: absolute;
     top: 0;
     left: 0;
@@ -186,7 +186,7 @@ header nav ul li:last-child{
     z-index: -1;
 }
 
-.one .background-image:after{
+.one .backgroundImage:after{
     content: '';
     position: absolute;
     top: 0;
