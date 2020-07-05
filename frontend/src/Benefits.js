@@ -7,17 +7,17 @@ const Benefits = () => {
             <ul className="grid">
                 <li>
                     <i className="fa fa-camera-retro fa-4x"></i>
-                    <h4></h4>
+                    <h4><br/></h4>
                     <p>Integrates seamlessly with your browser</p>
                 </li>
                 <li>
                     <i className="fas fa-globe fa-4x"></i>
-                    <h4></h4>
+                    <h4><br/></h4>
                     <p>Providing the best discount code to use</p>
                 </li>
                 <li>
                     <i className="fas fa-fan fa-4x"></i>                    
-                    <h4></h4>
+                    <h4><br/></h4>
                     <p>No expiry to your cashback</p>
                 </li> 
             </ul>

@@ -7,17 +7,17 @@ const HowItWorks = () => {
             <ul className="grid">
                 <li>
                     <i className="fas fa-stream fa-4x"></i>
-                    <h4>Activate</h4>
+                    <h4><br/>Activate<br/></h4>
                     <p>Install Twekes website browser for easy code activation</p>
                 </li>
                 <li>
                     <i className="fas fa-shopping-basket fa-4x"></i>
-                    <h4>Shop</h4>
+                    <h4><br/>Shop<br/></h4>
                     <p>Shop and spend online</p>
                 </li>
                 <li>
                     <i className="fas fa-percent fa-4x"></i>
-                    <h4>Earn</h4>
+                    <h4><br/>Earn<br/></h4>
                     <p>Receive automatic cashback when you checkout with Twekes!</p>
                 </li> 
             </ul>

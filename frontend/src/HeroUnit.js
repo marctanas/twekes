@@ -8,7 +8,7 @@ const HeroUnit = () => {
             <h3>Automatic coupons and cashback when you shop online</h3>
             <div className="InputAddOn">
                 <input className="InputAddOn-field" type="email" placeholder="Sign up today"/>
-                <button className="InputAddOn-item">Claim your $5</button>
+                <button className="InputAddOn-item" type="submit">Claim your $5</button>
             </div>
         </section>
     );
