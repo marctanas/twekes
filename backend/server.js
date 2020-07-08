@@ -13,11 +13,14 @@ const passport = require('passport');
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 
+// Import cors
+//const cors = require('cors');
+
 // The same secret in routes/AccountsRoutes will be needed to read the jsonwebtoken
 const secret = "s3cr3t100";
 
 // We need the AccountsModel to find the user in the database
-const AccountsModel = require('./backend/models/AccountsModel');
+const AccountsModel = require('./models/AccountsModel');
 
 // Options for passport-jwt
 const passportJwtOptions = {
@@ -52,8 +55,8 @@ const passportJwt = (passport) => {
 };
 
 // Import routes
-const MerchantsRoutes = require('./backend/routes/MerchantsRoutes');
-const AccountsRoutes = require('./backend/routes/AccountsRoutes');
+const MerchantsRoutes = require('./routes/MerchantsRoutes');
+const AccountsRoutes = require('./routes/AccountsRoutes');
 
 // Create the server object
 const server = express();
@@ -62,6 +65,7 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 server.use(passport.initialize());
+//server.use(cors());
 
 // Invoke passportJwt and pass the passport package as argument
 passportJwt(passport);

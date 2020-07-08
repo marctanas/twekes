@@ -28,6 +28,9 @@ body{
     font-family: sans-serif;
 }
 
+
+/* ----- START OF LOGING FORM ----- */
+
 .login-form{
     height: 100vh;
     /* background-image: url('../img/bg.jpg'); */
@@ -35,7 +38,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    padding: 15px;
 }
 
 .login-form .box{
@@ -146,14 +149,14 @@ body{
 .login-form .box .social-links p{
     text-align: center;
     color: var(--greydark);
-    font-size: 16px;
+    font-size: 14px;
     margin: 20px 0px 20px;
 }
 
 .login-form .box .social-links .links-box{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-bottom: 20px;
 }
 
@@ -182,9 +185,6 @@ body{
     background-color: black;
 }
 
-
-
-
 /*responsive*/
 @media(max-width: 500px){
     .login-form .box{
@@ -196,6 +196,182 @@ body{
     }
 }
 
+/* ----- END OF LOGING FORM ----- */
+
+
+/* ----- START OF SIGN UP FORM ----- */
+
+.signup-form{
+    height: 100vh;
+    /* background-image: url('../img/bg.jpg'); */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.signup-form .box{
+    min-width: 400px;
+    min-height: 450px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #cccccc;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.signup-form .box .img img{
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
+.signup-form .box .heading h4{
+    color: var(--bluebackground);
+    font-size: 22px;
+    text-align: left;
+    margin: 15px 0px 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.signup-form .box .form-fields{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.signup-form .box .form-fields .input-box{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.signup-form .box .form-fields .input-box .form-control{
+    height: 40px;
+    width: 100%;
+    padding: 0px 0px 0px 45px;
+    color: var(--greydark);
+    border: 1px solid #cccccc; 
+}
+
+.signup-form .box .form-fields .input-box .form-control::placeholder{
+    color: #cccccc;
+}
+
+.signup-form .box .form-fields .input-box span{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+.signup-form .box .form-fields .input-box span img{
+    width: 22px;
+
+}
+
+.signup-form .box .form-fields .button-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid;
+    padding-bottom: 30px;
+    display: inline-block;
+
+}
+
+.signup-form .box .form-fields .button-box button{
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 35px;
+    background-color: var(--bluebackground);
+    transition:box-shadow .5s ease;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.signup-form .box .form-fields .button-box button:hover{
+    box-shadow: 0px 0px 10px gray;
+    color: var(--yellowhover)
+}
+
+.signup-form .box .form-fields .button-box a{
+    font-size: 14px;
+    color: var(--bluebackground);
+}
+
+.signup-form .box .social-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form .box .social-links p{
+    text-align: center;
+    color: var(--greydark);
+    font-size: 14px;
+    margin: 20px 0px 20px;
+}
+
+.signup-form .box .social-links .links-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.signup-form .box .social-links .links-box a{
+    color: #ffffff;
+    padding: 8px;
+    width: calc(33.33% - 15px);
+    font-size: 14px;
+    text-align: center;
+    transition: box-shadow .5s ease;
+}
+
+.signup-form .box .social-links .links-box a.hover{
+    box-shadow: 0px 0px 10px gray;
+}
+
+.signup-form .box .social-links .links-box a.facebook{
+    background-color: #4267B2;
+}
+
+.signup-form .box .social-links .links-box a.google{
+    background-color: #DB4437;
+}
+
+.signup-form .box .social-links .links-box a.apple{
+    background-color: black;
+}
+
+.signup-form .box .legal p{
+    text-align: center;
+    color: var(--greydark);
+    font-size: 11px;
+    margin: 20px 0px 20px;
+} 
+
+/*responsive*/
+@media(max-width: 500px){
+    .signup-form .box{
+        min-width: 100%;
+        padding: 30px;
+    }
+    .signup-form .form{
+        min-width: 100%;
+    }
+}
 
 
 ul, nav{
