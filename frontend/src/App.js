@@ -8,21 +8,20 @@ import Reviews from './Reviews.js';
 import NavBar from './NavBar.js';
 import WebExtension from './WebExtension.js';
 //import Signup from './Signup.js';
-import Login from './Login.js';
+//import Login from './Login.js';
 
 import './App.css';
 
 function App() {
   return (
     <div>
-        {/* <NavBar />
+        <NavBar />
          <HeroUnit />
         <HowItWorks />
         <Benefits />
         <Merchants />
         <Reviews />
-        <WebExtension /> */}
-        <Login/>
+        <WebExtension />
         <Footer />
 
     </div>
