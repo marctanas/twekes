@@ -6,19 +6,23 @@ import HowItWorks from './HowItWorks.js';
 import Merchants from './Merchants.js';
 import Reviews from './Reviews.js';
 import NavBar from './NavBar.js';
-import WebExtension from './WebExtension';
+import WebExtension from './WebExtension.js';
+//import Signup from './Signup.js';
+import Login from './Login.js';
+
 import './App.css';
 
 function App() {
   return (
     <div>
-        <NavBar />
-        <HeroUnit />
+        {/* <NavBar />
+         <HeroUnit />
         <HowItWorks />
         <Benefits />
         <Merchants />
         <Reviews />
-        <WebExtension />
+        <WebExtension /> */}
+        <Login/>
         <Footer />
 
     </div>

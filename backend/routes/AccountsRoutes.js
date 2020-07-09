@@ -19,8 +19,7 @@ router.post(
 
         // capture the user data coming from the client (e.g browser, postman)
         const userData = {
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
+            fullName: req.body.fullName,
             email: req.body.email,
             password: req.body.password
         };

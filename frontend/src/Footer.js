@@ -6,12 +6,12 @@ const Footer = () => {
             <ul>
                 <p>Follow Us On</p>
             </ul>
-            <ul class="socialmedia">
-                <li><a href="https://twitter.com/jointwekes" target="/blank"><i class="fab fa-twitter-square"></i></a></li>
-                <li><a href="https://www.facebook.com/twekes" target="/blank"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i class="fab fa-instagram-square"></i></a></li>
+            <ul className="socialmedia">
+                <li><a href="https://twitter.com/jointwekes" target="/blank"><i className="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://www.facebook.com/twekes" target="/blank"><i className="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i className="fab fa-instagram-square"></i></a></li>
             </ul>
-            <ul class="links">
+            <ul className="links">
                 <li><a href="https://www.twekes.com/about">About</a></li>
                 <li><a href="https://www.twekes.com/about#faq">FAQ</a></li>
                 <li><a href="https://www.twekes.com/legal/terms">Terms</a></li>
