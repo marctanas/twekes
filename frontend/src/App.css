@@ -911,6 +911,68 @@ header nav ul li:last-child{
 
 /*---- END OF SIGNUP FORM ----*/
 
+/*---- START OF BLOG ----*/
+
+.descriptionBlog{
+    text-align: left;
+    width: 80%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding:0;
+}
+
+.post-preview .a {
+    color: var(--greydark);
+  }
+  .post-preview > a:focus,
+  .post-preview > a:hover {
+    text-decoration: none;
+    color: var(--bluebackground);
+  }
+  .post-preview .a .post-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .post-preview .a .post-subtitle {
+    font-weight: 300;
+    margin: 0 0 10px;
+    color: #868e96;
+  }
+  .post-preview .post-meta {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    color: #868e96;
+  }
+  .post-preview .post-meta .a {
+    text-decoration: none;
+    color: var(--greydark);
+  }
+
+.pager .btn{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: var(--bluebackground);
+}
+
+.pager .btn:hover{
+    color: var(--yellowhover);
+}
+
+  @media only screen and (min-width: 768px) {
+    .post-preview > a > .post-title {
+      font-size: 36px;
+    }
+  }
+
+  /*---- END OF BLOG ---- */
+
+  
 
 /*Footer*/
 footer{

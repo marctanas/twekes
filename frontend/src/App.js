@@ -9,6 +9,7 @@ import NavBar from './NavBar.js';
 import WebExtension from './WebExtension.js';
 //import Signup from './Signup.js';
 //import Login from './Login.js';
+//import Blog from './Blog.js';
 
 import './App.css';
 

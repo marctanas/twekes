@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Footer = () => {
+
+    let thisYear = new Date();
+
     return (
         <footer>
             <ul>
@@ -19,7 +22,7 @@ const Footer = () => {
                 <li><a href="https://www.twekes.com/blog">Blog</a></li>
             </ul>
             <ul className="copyright">
-                <script>document.write(new Date().getFullYear());</script> &copy; Twekes Technology Inc. All Rights Reserved
+                {thisYear.getFullYear()} &copy; Twekes Technology Inc. All Rights Reserved
             </ul>
         </footer>
 
