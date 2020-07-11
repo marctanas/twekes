@@ -1,7 +1,8 @@
 // Import express into the file
 const express = require('express');
 const bcrypt = require('bcrypt');
-// invoke the router()
+
+//invoke the router()
 const router = express.Router();
 
 const jwt = require('jsonwebtoken');
@@ -47,12 +48,12 @@ router.post(
                 
                                 // if something goes wrong, send error
                                 if(err){
-                                    res.send(err)
+                                    res.json({message: err})
                                 }
                                 
                                 // Otherwise, send success message
                                 else{
-                                    res.send('Your POST Register User has been received and saved');
+                                    res.json({message: 'Your POST Register User has been received and saved'});
                                 }
                             }
                         );
@@ -92,7 +93,7 @@ router.post(
 
                 //Step 2b. If email does not match, reject the login request
                 if(!document){
-                    res.send("Please check email or password")
+                    res.json({message: "Please check email or password"})
                 }
 
                 // Step 3. If there is matching email, examine the document( the userData - password)
@@ -115,9 +116,9 @@ router.post(
                                     payload,
                                     secret,
                                     (err, jsonwebtoken) => {
-                                        res.send(
+                                        res.json(
                                             {
-                                                msg: 'Login successful',
+                                                message: 'Login successful',
                                                 jsonwebtoken: jsonwebtoken
                                             }
                                         )
@@ -127,7 +128,7 @@ router.post(
 
                             //Step 5b. If password does not match, reject login request
                             else {
-                                res.send("Please check email or password")
+                                res.json({message:"Please check email or password"})
                             }
                         }
                     )
