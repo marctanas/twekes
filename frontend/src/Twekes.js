@@ -19,7 +19,6 @@ function Twekes() {
         <Reviews />
         <WebExtension />
         <Footer />
-
     </div>
   );
 }

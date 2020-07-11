@@ -1,43 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
 /* General styling */
 :root{
     --greyapple: #ecf0f1;
@@ -141,6 +101,70 @@ hr {
 
 /* END General Styling */
 
+
+/* ---- START Loader ----- */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffd149;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+
+
+
+/* ---- END Loader ---- */
 
 /* START Header*/
 
@@ -589,7 +613,7 @@ header nav ul li:last-child{
 }
 
 .login-form .box .img img{
-    width: 60px;
+    width: 160px;
     display: block;
     margin: auto;
 }
@@ -676,27 +700,27 @@ header nav ul li:last-child{
     color: var(--bluebackground);
 }
 
-.login-form .box .social-links{
+.login-form .box .other-links{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.login-form .box .social-links p{
+.login-form .box .other-links p{
     text-align: center;
     color: var(--greydark);
     font-size: 14px;
     margin: 20px 0px 20px;
 }
 
-.login-form .box .social-links .links-box{
+.login-form .box .other-links .links-box{
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding-bottom: 20px;
 }
 
-.login-form .box .social-links .links-box a{
+.login-form .box .other-links .links-box a{
     color: #ffffff;
     padding: 8px;
     width: calc(33.33% - 15px);
@@ -705,19 +729,19 @@ header nav ul li:last-child{
     transition: box-shadow .5s ease;
 }
 
-.login-form .box .social-links .links-box a.hover{
+.login-form .box .other-links .links-box a.hover{
     box-shadow: 0px 0px 10px gray;
 }
 
-.login-form .box .social-links .links-box a.facebook{
+.login-form .box .other-links .links-box a.facebook{
     background-color: #4267B2;
 }
 
-.login-form .box .social-links .links-box a.google{
+.login-form .box .other-links .links-box a.google{
     background-color: #DB4437;
 }
 
-.login-form .box .social-links .links-box a.apple{
+.login-form .box .other-links .links-box a.apple{
     background-color: black;
 }
 
@@ -759,7 +783,7 @@ header nav ul li:last-child{
 }
 
 .signup-form .box .img img{
-    width: 60px;
+    width: 160px;
     display: block;
     margin: auto;
 }
@@ -846,27 +870,27 @@ header nav ul li:last-child{
     color: var(--bluebackground);
 }
 
-.signup-form .box .social-links{
+.signup-form .box .other-links{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.signup-form .box .social-links p{
+.signup-form .box .other-links p{
     text-align: center;
     color: var(--greydark);
     font-size: 14px;
     margin: 20px 0px 20px;
 }
 
-.signup-form .box .social-links .links-box{
+.signup-form .box .other-links .links-box{
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding-bottom: 20px;
 }
 
-.signup-form .box .social-links .links-box a{
+.signup-form .box .other-links .links-box a{
     color: #ffffff;
     padding: 8px;
     width: calc(33.33% - 15px);
@@ -875,19 +899,19 @@ header nav ul li:last-child{
     transition: box-shadow .5s ease;
 }
 
-.signup-form .box .social-links .links-box a.hover{
+.signup-form .box .other-links .links-box a.hover{
     box-shadow: 0px 0px 10px gray;
 }
 
-.signup-form .box .social-links .links-box a.facebook{
+.signup-form .box .other-links .links-box a.facebook{
     background-color: #4267B2;
 }
 
-.signup-form .box .social-links .links-box a.google{
+.signup-form .box .other-links .links-box a.google{
     background-color: #DB4437;
 }
 
-.signup-form .box .social-links .links-box a.apple{
+.signup-form .box .other-links .links-box a.apple{
     background-color: black;
 }
 
@@ -972,9 +996,9 @@ header nav ul li:last-child{
 
   /*---- END OF BLOG ---- */
 
-  
 
-/*Footer*/
+/* --- START OF Footer ---- */
+
 footer{
 	display: flex;
 	flex-direction: column;
@@ -1036,3 +1060,5 @@ footer p a{
         font-size: 12px;
     }
 }
+
+/* ---- END OF FOOTER ---- */

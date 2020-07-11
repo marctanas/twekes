@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+//import AppContext from './AppContext';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+
+    // const logOut = () => {
+    //     setGlobalState(
+    //         {
+    //             ...globalState,
+    //             loggedIn: false
+    //         }
+    //     );
+
+    //     localStorage.clear();
+    // }
+
     return (
         <header>
             <h2><Link 

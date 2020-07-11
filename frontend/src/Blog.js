@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer.js';
+
 
 
 
@@ -83,6 +85,7 @@ import { Link } from 'react-router-dom';
                         </div>
                     </div>
                 </section> 
+                <Footer/>
             </div>
         )
     }

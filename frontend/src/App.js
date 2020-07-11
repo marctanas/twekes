@@ -1,23 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Twekes from './Twekes';
-import Login from './Login';
-import Signup from './Signup';
+import AppContext from './AppContext';
+import About from './About';
 import Blog from './Blog';
+import Login from './Login';
+import PasswordRecovery from './PasswordRecovery';
+import Privacy from './Privacy';
+import Shop from './Shop';
+import Signup from './Signup';
+import Terms from './Terms';
+import Twekes from './Twekes';
 
 import './App.css';
 
 function App() {
+
+  const [globalState, setGlobalState] = useState({
+    loggedIn: localStorage.getItem('jwt') ? true : false,
+    user: null,
+    email: null
+
+  });
+
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact={true} component={Twekes}/>
-        <Route path="/accounts/login" exact={true} component={Login}/>
-        <Route path="/accounts/signup" exact={true} component={Signup}/>
-        <Route path="/blog" exact={true} component={Blog}/>
-      </Switch>
-    </BrowserRouter>
-  );
+    <AppContext.Provider value={[globalState, setGlobalState]}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact={true} component={Twekes}/>
+          <Route path="/about" exact={true} component={About}/>
+          <Route path="/blog" exact={true} component={Blog}/>
+          <Route path="/accounts/signup" exact={true} component={Signup}/>
+          <Route path="/accounts/login" exact={true} component={Login}/>
+          <Route path="/accounts/passwordrecovery" exact={true} component={PasswordRecovery}/>
+          <Route path="/legal/privacy" exact={true} component={Privacy}/>
+          <Route path="/shop" exact={true} component={Shop}/>
+          <Route path="/legal/terms" exact={true} component={Terms}/>
+        </Switch>
+      </BrowserRouter>
+    </AppContext.Provider>
+  )
 }
 
 export default App;

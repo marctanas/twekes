@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
 
     let thisYear = new Date();
+
+    const scrollToTop = () =>{ 
+        window.scrollTo(0, 0); 
+    } 
 
     return (
         <footer>
@@ -15,11 +21,11 @@ const Footer = () => {
                 <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i className="fab fa-instagram-square"></i></a></li>
             </ul>
             <ul className="links">
-                <li><a href="https://www.twekes.com/about">About</a></li>
-                <li><a href="https://www.twekes.com/about#faq">FAQ</a></li>
-                <li><a href="https://www.twekes.com/legal/terms">Terms</a></li>
-                <li><a href="https://www.twekes.com/legal/privacy">Privacy</a></li>
-                <li><a href="https://www.twekes.com/blog">Blog</a></li>
+                <li onClick={scrollToTop()}><Link to="/about">About</Link></li>
+                <li onClick={scrollToTop()}><Link to="/about#faq">FAQ</Link></li>
+                <li onClick={scrollToTop()}><Link to="/legal/terms">Terms</Link></li>
+                <li onClick={scrollToTop()}><Link to="/legal/privacy">Privacy</Link></li>
+                <li onClick={scrollToTop()}><Link to="/blog">Blog</Link></li>
             </ul>
             <ul className="copyright">
                 {thisYear.getFullYear()} &copy; Twekes Technology Inc. All Rights Reserved

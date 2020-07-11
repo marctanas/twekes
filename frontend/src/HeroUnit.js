@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 const HeroUnit = () => {
@@ -13,7 +15,6 @@ const HeroUnit = () => {
     let emailEntry;
 
     const inputField = () => {
-        //alert(emailEntry.value);
         if (emailEntry.value === ""){
             setState (
                 {
@@ -23,7 +24,7 @@ const HeroUnit = () => {
         }else{
             setState (
                 {
-                    label: 'GREAT'
+                    label: 'GREAT'            
                 }
             )
         }
@@ -48,7 +49,12 @@ const HeroUnit = () => {
                     id="button-email"
                     className="InputAddOn-item"
                     onClick={inputField}
-                    >{state.label}</button>
+                    >{
+                    <Link 
+                        to="/accounts/signup">
+                        {state.label}
+                    </Link>}   
+                </button>
             </div>
         </section>
     );
