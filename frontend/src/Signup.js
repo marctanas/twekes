@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 const Signup = () => {
@@ -43,9 +45,10 @@ const Signup = () => {
     <div>
 
         <header>
-            <h2><a href="https://www.twekes.com">
-                <img src="img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-                </a></h2>
+            <h2><Link 
+                to="/">
+                <img src="/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
+                </Link></h2>
         </header>
 
         <section className="noMasterImage">

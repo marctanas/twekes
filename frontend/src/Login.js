@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -20,9 +22,10 @@ const Login = () => {
 
     <div>
         <header>
-            <h2><a href="https://www.twekes.com">
-                <img src="img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-                </a></h2>
+            <h2><Link 
+                to="/">
+                <img src="/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
+                </Link></h2>
         </header>
         <section className="noMasterImage">
             <div className="background-image" > </div>
@@ -32,7 +35,7 @@ const Login = () => {
             <form>
                 <div className="box">
                     <div className="img">
-                        <img src="img/user.png" alt="user"/>
+                        <img src="/img/user.png" alt="user"/>
                     </div>
                     <div className="heading">
                         <h4>Welcome Back</h4>
@@ -46,7 +49,7 @@ const Login = () => {
                                     (elem) => emailField = elem 
                                 }
                             />
-                            <span><img src="img/email.png"/></span>
+                            <span><img src="/img/email.png"/></span>
                         </div>
                         <div className="input-box">
                             <input type="password" 
@@ -56,7 +59,7 @@ const Login = () => {
                                     (elem) => passwordField = elem 
                                 }
                             />
-                            <span><img src="img/password.png"/></span>
+                            <span><img src="/img/password.png"/></span>
                         </div>
                         <div className="button-box">
                             <button type="submit"

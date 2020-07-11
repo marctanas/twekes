@@ -1,17 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <header>
-            <h2><a href="https://www.twekes.com">
+            <h2><Link 
+                to="/">
                 <img src="/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-            </a></h2>
+            </Link></h2>
             <nav>
                 <ul>
-                    <li className="howItWorksLink"><a href="#howitworks">How it Works</a></li>
-                    <li className="blogLink"><a href="https://www.twekes.com/blog.html">Blog</a></li>
-                    <li className="signupLink"><a href="https://www.twekes.com/accounts/signup.html">Sign up</a></li>
-                    <li className="loginLink"><a href="https://www.twekes.com/accounts/login.html">Login</a></li>
+                    <li className="howItWorksLink">
+                        <a href="#howitworks">How it Works</a>
+                    </li>
+                    <li className="blogLink">
+                        <Link 
+                            to="/blog">
+                            Blog
+                        </Link>
+                    </li>
+                    <li className="signupLink">
+                        <Link 
+                            to="/accounts/signup">
+                            Sign Up
+                        </Link>
+                    </li>
+                    <li className="loginLink">
+                        <Link 
+                            to="/accounts/login">
+                            Login
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
