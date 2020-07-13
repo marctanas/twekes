@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer.js';
 
 
-
-
 const Signup = () => {
-
-    let nameField;
-    let emailField;
-    let passwordField;
 
     const [state, setState] = useState(
         {
             registered: false
         }
     )
+
+    let nameField;
+    let emailField;
+    let passwordField;
 
     const registerUser = () => {
 
@@ -26,8 +24,8 @@ const Signup = () => {
             body: JSON.stringify(
                 {
                     fullName: nameField.value, 
-                    email: emailField.value, password: 
-                    passwordField.value
+                    email: emailField.value, 
+                    password: passwordField.value
                 }
             ),
             headers: {"Content-Type": "application/json"},
@@ -38,14 +36,23 @@ const Signup = () => {
         )
         .then(
             (json) => {
-                console.log('response from backend', json)
-
-                 setState(
-                    {
-                        ...state,
-                        registered: true
-                    }
-                )
+                const { message } = json;
+                if(message === "User has been saved") {
+                    //
+                    setState(
+                        {
+                            ...state,
+                            registered: true
+                        }
+                    )
+                } else {
+                    setState(
+                        {
+                            ...state,
+                            registered: false
+                        }
+                    )
+                }
             }
         )
     }
