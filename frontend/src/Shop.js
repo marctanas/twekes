@@ -31,10 +31,10 @@ const Shop = () => {
                             {
                                 globalState.loggedIn === true && 
                                 <div onClick={logOut}>
-                                <Link 
-                                    to="/">
-                                    Log Out
-                                </Link>
+                                    <Link 
+                                        to="/">
+                                        Log Out
+                                    </Link>
                                 </div>
                             }   
                         </li>

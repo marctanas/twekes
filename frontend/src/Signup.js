@@ -2,21 +2,63 @@ import React, {useState} from 'react';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Footer from './Footer.js';
+import { validFullName, validEmail, validPassword} from './Utils';
 
 
 const Signup = () => {
 
     const [state, setState] = useState(
         {
-            registered: false
+            registered: false,
+            errors: 0,
+            messages: []
         }
-    )
+    );
 
     let nameField;
     let emailField;
     let passwordField;
 
     const registerUser = () => {
+
+        let errors = 0;
+        let messages = [];
+
+        if(!validFullName(nameField.value)) {
+            errors++;
+            messages.push('Please enter a valid full name')
+        }
+        if(!validEmail(emailField.value)) {
+            errors++;
+            messages.push('Please enter a valid email')
+        }
+        if(!validPassword(passwordField.value)) {
+            errors++;
+            messages.push('Please enter a valid password')
+        }
+
+        if(errors > 0){
+            setState(
+                {
+                    ...state,
+                    errors: errors,
+                    messages: messages
+                }
+            )
+            return;
+        }
+
+        else{
+            setState(
+                {
+                    ...state,
+                    errors: 0,
+                    messages: []
+                }
+            )
+
+        }
+
 
         fetch('http://localhost:8080/accounts/register', 
         {
@@ -83,7 +125,7 @@ const Signup = () => {
                                 <div className="input-box">
                                     <input type="text" 
                                         className="form-control"
-                                        placeholder="Enter First and Last Name"
+                                        placeholder="Enter Your Full Name"
                                         ref={ 
                                             (elem) => nameField = elem 
                                         }
@@ -93,7 +135,7 @@ const Signup = () => {
                                 <div className="input-box">
                                     <input type="text" 
                                         className="form-control" 
-                                        placeholder="Enter Email"
+                                        placeholder="Enter Your Email"
                                         ref={ 
                                             (elem) => emailField = elem 
                                         }
@@ -102,7 +144,7 @@ const Signup = () => {
                                 </div>
                                 <div className="input-box">
                                     <input type="password" 
-                                        placeholder="Password" 
+                                        placeholder="Any String Between 8 and 12 Characters" 
                                         className="form-control"
                                         ref={ 
                                             (elem) => passwordField = elem 
@@ -128,6 +170,16 @@ const Signup = () => {
                                     <p> By signing up, you agree to our <Link to="/legal/terms">Terms</Link> and <Link to="/legal/privacy">Privacy Policy</Link></p>
                                 </div>
                             </div>
+                            {
+                                    state.errors > 0 &&
+                                    <div class="alert alert-danger" role="alert">
+                                        {
+                                            state.messages.map(
+                                                (message)=><p>{message}</p>
+                                            )
+                                        }
+                                    </div>
+                                }
                         </div>
                     </div>
                 </section>
