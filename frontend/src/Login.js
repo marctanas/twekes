@@ -98,7 +98,7 @@ const Login = () => {
                                 <div className="input-box">
                                     <input type="text" 
                                         className="form-control"
-                                        placeholder="Enter Email"
+                                        placeholder="Email"
                                         ref={ 
                                             (elem) => emailField = elem 
                                         }

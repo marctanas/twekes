@@ -593,12 +593,11 @@ header nav ul li:last-child{
 
 .login-form{
     height: 100vh;
-    /* background-image: url('../img/bg.jpg'); */
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 5px;
 }
 
 .login-form .box{
@@ -763,7 +762,6 @@ header nav ul li:last-child{
 
 .signup-form{
     height: 100vh;
-    /* background-image: url('../img/bg.jpg'); */
     background-size: cover;
     display: flex;
     align-items: center;
