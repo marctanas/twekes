@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import AppContext from './AppContext';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Footer from './Footer.js';
@@ -6,6 +7,9 @@ import { validFullName, validEmail, validPassword} from './Utils';
 
 
 const Signup = () => {
+
+    const [globalState, setGlobalState] = useContext(AppContext);
+
 
     const [state, setState] = useState(
         {
@@ -172,7 +176,7 @@ const Signup = () => {
                             </div>
                             {
                                     state.errors > 0 &&
-                                    <div class="alert alert-danger" role="alert">
+                                    <div className="alert alert-danger" role="alert">
                                         {
                                             state.messages.map(
                                                 (message)=><p>{message}</p>

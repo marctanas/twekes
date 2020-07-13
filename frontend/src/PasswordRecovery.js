@@ -44,7 +44,7 @@ const PasswordRecovery = () => {
         )
         .then(
             (json) => {
-                console.log('response from backend', json)
+                // console.log('response from backend', json)
                 setState(
                     {
                         pswdRecovery: true
@@ -81,7 +81,7 @@ const PasswordRecovery = () => {
                                     <div className="input-box">
                                         <input type="text" 
                                             className="form-control"
-                                            placeholder="Enter Email"
+                                            placeholder="Enter Your Email"
                                             ref={ 
                                                 (elem) => emailField = elem 
                                             }
