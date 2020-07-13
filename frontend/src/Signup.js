@@ -52,7 +52,7 @@ const Signup = () => {
 
     // If the user is loggedIn, redirect them
     if(state.registered === true) {
-        return(<Redirect to="/"/>)
+        return(<Redirect to="/accounts/login"/>)
     }
 
     else{

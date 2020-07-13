@@ -8,17 +8,15 @@
 }
 
 *{
-
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
-    margin: 0;
-    padding: 0;
+html{
     font: normal 16px sans-serif;
     color: #555;
 }
-
 
 ul, nav{
     list-style: none;
@@ -27,6 +25,8 @@ ul, nav{
 a{
 	text-decoration: none;
 	color: inherit;
+	
+
 	opacity: 0.9;
 }
 
@@ -996,50 +996,6 @@ header nav ul li:last-child{
 
   /*---- END OF BLOG ---- */
 
-/* ----- START OF SHOP ---- */
-.nav-sidebar,
-.shop-user-content {
-    padding: 20px;
-}
-
-.nav-sidebar {
-    background: var(--bluebackground);
-}
-.shop-user-content {
-    color: #777;
-}
-
-/**
- * Flex things:
- * — Mobile first
- * — Responsive
- */
-.shop-user {
-    min-height: 100vh;
-}
-.shop-user,
-.shop-user-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-}
-.shop-user-content {
-    flex: 1 1 auto;
-}
-@media (min-width: 768px) {
-    .shop-user-sidebar-1 {
-        order: -1;
-    }
-    .shop-user-body {
-        flex-direction: row;
-    }
-    .nav-sidebar {
-        flex: 0 0 260px;
-    }
-}
-
-/* ---- END OF SHOP ---- */
-
 
 /* --- START OF Footer ---- */
 
@@ -1050,7 +1006,7 @@ footer{
 	text-align: center;
 	color: #fff;
 	background-color: #414a4f;
-	padding: 30px 0;
+	padding: 20px 0;
 }
 
 footer ul.socialmedia{
@@ -1062,7 +1018,7 @@ footer ul.socialmedia{
 footer ul.links{
 	display: flex;
 	margin-bottom: 25px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 footer ul.copyright{

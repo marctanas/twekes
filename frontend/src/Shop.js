@@ -18,35 +18,29 @@ const Shop = () => {
         localStorage.clear();
     }
 
-    return (  
-        <div> 
-            <div className="shop-user-body">
-                <div className="shop-user-sidebar-1 nav-sidebar">
-                    <h2><Link 
-                        to="/shop">
-                        <img src="/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
-                    </Link></h2>
-                    
-                    <div className="loginLink">
+    return (    
+        <header>
+            <h2><Link 
+                to="/">
+                <img src="/img/twekeslogo.png" width="130" height="40" alt="twekes"/>
+            </Link></h2>
+            <nav>
+                <ul>
+                    <li className="loginLink">
                         {
                             globalState.loggedIn === true && 
-                            <div className="btn" style={{color: `white`}} onClick={logOut}>
+                            <button onClick={logOut}>
                             <Link 
                                 to="/">
                                 Log Out
                             </Link>
-                            </div>
+                            </button>
                         }   
-                    </div>
-                </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-                <section className="shop-user-content">
-                    <p>Search bar and list of shops with activate offer</p>
-                </section>
-
-            </div>
-
-        </div> 
     )
 }
 

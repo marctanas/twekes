@@ -16,9 +16,9 @@ const Footer = () => {
                 <p>Follow Us On</p>
             </ul>
             <ul className="socialmedia">
-                <li><a href="https://twitter.com/jointwekes" target="/blank"><i className="fab fa-twitter-square"></i></a></li>
-                <li><a href="https://www.facebook.com/twekes" target="/blank"><i className="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i className="fab fa-instagram-square"></i></a></li>
+                <li><a href="https://twitter.com/jointwekes" target="/blank"><i className="fab fa-twitter-square fa-sm"></i></a></li>
+                <li><a href="https://www.facebook.com/twekes" target="/blank"><i className="fab fa-facebook-square fa-sm"></i></a></li>
+                <li><a href="https://www.instagram.com/jointwekes/" target="/blank"><i className="fab fa-instagram-square fa-sm"></i></a></li>
             </ul>
             <ul className="links">
                 <li onClick={scrollToTop()}><Link to="/about">About</Link></li>
