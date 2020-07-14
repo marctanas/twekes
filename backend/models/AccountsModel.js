@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 // class contructor
 const UsersSchema = new mongoose.Schema(
     {
+        avatar: {
+            type: String
+        },
         fullName: {
             type: String,
             required: true

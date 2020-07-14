@@ -41,5 +41,29 @@ router.post(
     
 );
 
+// A GET route for fetching data from the 'merchants' collection
+router.get(
+    '/',
+    (req, res)=>{
+
+        // Fetch all the documetns using .find()
+        MerchantsModel.find()
+
+        //Once the results are ready, use .json() to send the results
+        .then(
+            (results) => {
+                res.json(results)
+            }
+        )
+        .catch(
+            (e) => {
+                console.log('error eccured', e)
+            }
+        )
+
+    }
+);
+
+
 // Export the router
 module.exports = router;
