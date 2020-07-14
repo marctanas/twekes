@@ -1,5 +1,4 @@
-import React, { useState, useContext } from 'react';
-import AppContext from './AppContext';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
 //import { Link } from 'react-router-dom';
@@ -8,11 +7,10 @@ import { Redirect } from 'react-router-dom';
 
 const HeroUnit = () => {
 
-    const [globalState, setGlobalState] = useContext(AppContext);
-
     const [state, setState] = useState(
         {
-            label: 'Claim your $5'
+            label: 'Claim your $5',
+            enteredEmail: false
             
         }
     )
@@ -31,25 +29,18 @@ const HeroUnit = () => {
             )
         }else{
 
-            setGlobalState(
-                {
-                    ...globalState,
-                    email: emailEntry
-
-                }
-            )
-
             setState (
                 {
                     ...state,
-                    label: 'GREAT'            
+                    label: 'GREAT',
+                    enteredEmail: true           
                 }
             )
         }
     }
 
     // If the user enters email, redirect them
-    if(emailEntry === "") {
+    if(state.enteredEmail === true) {
         return(<Redirect to="/accounts/signup"/>)
     }
 

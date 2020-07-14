@@ -76,8 +76,71 @@ router.post(
 router.post(
     '/login',
     (req,res) => {
+        
+        // Step 1. Capture userData (email & password)
+        const userData = {
+            email: req.body.email,
+            password: req.body.password
+        }
 
-        // npm packages to install: passport, passport-jwt, jsonwebtoken 
+        // Step 2a. In database, Find account that matches email
+        AccountsModel.findOne(
+            {email: userData.email},
+            (err, document) => {
+                
+
+                //Step 2b. If email does not match, reject the login request
+                if(!document){
+                    res.json({message: "Please check your email or password"})
+                }
+
+                // Step 3. If there is matching email, examine the document( the userData - password)
+                else {
+
+                    // Step 4. Compare the encrypted password in database with incoming password
+                    bcrypt.compare(userData.password, document.password)
+                    .then(
+                        (isMatch) => {
+
+                            // Step 5a. If the password matches, generate web token (JWT - json web token)
+                            if(isMatch){
+                                // Step 6. Send the JWT to the client (postman, browser)
+                                const payload = {
+                                    id: document.id,
+                                    email: document.email
+                                };
+
+                                jwt.sign(
+                                    payload,
+                                    secret,
+                                    (err, jsonwebtoken) => {
+                                        res.json(
+                                            {
+                                                message: 'Login successful',
+                                                jsonwebtoken: jsonwebtoken
+                                            }
+                                        )
+                                    }
+                                )
+                            }
+
+                            //Step 5b. If password does not match, reject login request
+                            else {
+                                res.json({message:"Please check your email or password"})
+                            }
+                        }
+                    )
+                }
+            }
+        )
+        
+    }
+);
+
+// /update
+router.post(
+    '/update',
+    (req,res) => {
         
         // Step 1. Capture userData (email & password)
         const userData = {
