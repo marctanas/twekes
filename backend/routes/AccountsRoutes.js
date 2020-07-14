@@ -93,7 +93,7 @@ router.post(
 
                 //Step 2b. If email does not match, reject the login request
                 if(!document){
-                    res.json({message: "Please check email or password"})
+                    res.json({message: "Please check your email or password"})
                 }
 
                 // Step 3. If there is matching email, examine the document( the userData - password)
@@ -128,7 +128,7 @@ router.post(
 
                             //Step 5b. If password does not match, reject login request
                             else {
-                                res.json({message:"Please check email or password"})
+                                res.json({message:"Please check your email or password"})
                             }
                         }
                     )

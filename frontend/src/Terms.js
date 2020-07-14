@@ -23,7 +23,7 @@ const Terms = () =>{
                         </li>
                         <li className="signupLink">
                             <Link 
-                                to="accounts/signup">
+                                to="/accounts/signup">
                                 Sign up
                             </Link>
                         </li>
