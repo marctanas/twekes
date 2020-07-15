@@ -28,7 +28,7 @@ const Shop = () => {
                 <nav>
                     <ul>
                         <li className="loginLink">
-                            {
+                            {   
                                 globalState.loggedIn === true && 
                                 <div onClick={logOut}>
                                     <Link 
@@ -44,6 +44,24 @@ const Shop = () => {
 
             <section className="noMasterImage">
                 <div className="background-image" > </div>
+            </section>
+
+            <section>
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Company Logo</h3>
+                    </div>
+                    <img src="/w3images/hamburger.jpg" alt="Avatar"/>
+                    <div class="container" style={{backgroundColor: `white`}}>
+                        <h2><b>20% OFF YOUR PURCHASE</b></h2> 
+                        <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum, salutandi delicatissimi eam ea. In sed nullam laboramus appellantur, mei ei omnis dolorem mnesarchum.</p>
+                    </div>
+                    <div class="container">
+                        <p>Use Promo Code: <span class="promo">BOH232</span></p>
+                        <p class="expire">Expires: Jan 03, 2021</p>
+                    </div>
+                </div>
+
             </section>
         </div> 
     )

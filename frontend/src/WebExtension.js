@@ -9,7 +9,7 @@ const WebExtension = () => {
             <p>
                 Start earning when you shop online
             </p>
-            <a href="https://www.twekes.com/installer/extension" className="btn">
+            <a href="/" className="btn">
                 Download it here
             </a>
         </section>

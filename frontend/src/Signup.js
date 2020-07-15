@@ -163,6 +163,16 @@ const Signup = () => {
                                     </button>
                                     <Link to="/accounts/login">Log In To Account</Link>
                                 </div>
+                                {
+                                    state.errors > 0 &&
+                                    <div>
+                                        {
+                                            state.messages.map(
+                                                (message)=><span>{message}<br/></span>
+                                            )
+                                        }
+                                    </div>
+                                }
                             </div>
                             <div className="other-links">
                                 <p> or Sign up with</p>
@@ -174,16 +184,6 @@ const Signup = () => {
                                     <p> By signing up, you agree to our <Link to="/legal/terms">Terms</Link> and <Link to="/legal/privacy">Privacy Policy</Link></p>
                                 </div>
                             </div>
-                            {
-                                    state.errors > 0 &&
-                                    <div className="alert alert-danger" role="alert">
-                                        {
-                                            state.messages.map(
-                                                (message)=><p>{message}</p>
-                                            )
-                                        }
-                                    </div>
-                                }
                         </div>
                     </div>
                 </section>

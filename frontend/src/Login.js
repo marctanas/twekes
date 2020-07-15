@@ -107,7 +107,16 @@ const Login = () => {
                                             Forgot Password ?
                                         </Link>
                                     </div>
-                                    <div>{state.error && <span>{state.error}</span>}</div>
+                                    <div>
+                                        {
+                                            state.error && 
+                                            <span>
+                                                {
+                                                    state.error
+                                                }
+                                            </span>
+                                        }
+                                    </div>
                                 </div>
                                 <div className="other-links">
                                     <p> or log in with</p>
