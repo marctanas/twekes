@@ -20,6 +20,7 @@ router.post(
 
         // capture the user data coming from the client (e.g browser, postman)
         const userData = {
+            avatar: req.body.avatar,
             fullName: req.body.fullName,
             email: req.body.email,
             password: req.body.password
@@ -142,14 +143,14 @@ router.post(
     '/update',
     (req, res) => {
         const userData = {
+            avatar: req.body.avatar,
             fullName: req.body.fullName,
-            password: req.body.password,
             _id: req.body._id
         };
 
         AccountsModel.findOneAndUpdate(
             { _id: userData._id }, // search criteria
-            { fullName: userData.fullName, password: userData.password }, // the keys & values to update
+            { avatar: userData.avatar, fullName: userData.fullName }, // the keys & values to update
             {}, // options (if any)
             (err, document) => {
 
@@ -158,7 +159,7 @@ router.post(
                 } else {
                     res.json(
                         {
-                            message: 'User details have been updated',
+                            message: 'User Full Name has been updated',
                             document: document
                         }
                     )
