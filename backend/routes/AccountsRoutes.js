@@ -137,36 +137,36 @@ router.post(
     }
 );
 
-// /update
+// POST route to update product
 router.post(
     '/update',
     (req, res) => {
-        
-        // Read the form data
         const userData = {
             fullName: req.body.fullName,
-            email: req.body.email,
             password: req.body.password,
+            _id: req.body._id
         };
-        
 
-        // Find user email in database
-        AccountsModel.findOne(
-            {email: userData.email},
+        AccountsModel.findOneAndUpdate(
+            { _id: userData._id }, // search criteria
+            { fullName: userData.fullName, password: userData.password }, // the keys & values to update
+            {}, // options (if any)
             (err, document) => {
 
-                AccountsModel.updateOne({email: usersData.email}, {$push : {password: userData.password }} , (err, result) =>{
-                    if(err){console.log('could not update the password ')
-                }else {
-                    console.log('updated', result)
+                if(err) {
+                    console.log(err);
+                } else {
+                    res.json(
+                        {
+                            message: 'User details have been updated',
+                            document: document
+                        }
+                    )
                 }
-                })
-
-            })
-            res.send('updated successfully');          
-
-     }
-)
+            }
+        )
+    }
+);
 
 // Export the router
 module.exports = router;
