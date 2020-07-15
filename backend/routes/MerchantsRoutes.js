@@ -65,5 +65,37 @@ router.get(
 );
 
 
+// POST route to update product
+router.post(
+    '/update',
+    (req, res) => {
+        const merchantData = {
+            brandName: req.body.brandName,
+            discountCode: req.body.discountCode,
+            activateBrand: req.body.activateBrand,
+            _id: req.body._id
+        };
+
+        MerchantsModel.findOneAndUpdate(
+            { _id: merchantData._id }, // search criteria
+            { brandName: merchantData.brandName, discountCode: merchantData.discountCode, activateBrand: merchantData.activateBrand }, // the keys & values to update
+            {}, // options (if any)
+            (err, document) => {
+
+                if(err) {
+                    console.log(err);
+                } else {
+                    res.json(
+                        {
+                            message: 'Merchant details have been updated',
+                            document: document
+                        }
+                    )
+                }
+            }
+        )
+    }
+);
+
 // Export the router
 module.exports = router;

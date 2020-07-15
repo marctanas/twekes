@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 // class contructor
 const MerchantsSchema = new mongoose.Schema(
     {
+        loggedId: {
+            type: mongoose.Schema.Types.ObjectId,
+        },
         brandName: {
             type: String,
             required: true
