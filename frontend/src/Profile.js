@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import AppContext from './AppContext';
-import Listing from './Listing.js';
+import ProfileListing from './ProfileListing.js';
 import { Link } from 'react-router-dom';
 
 
-const Shop = () => {
+const Profile = () => {
 
     //const [globalState, setGlobalState] = useContext(AppContext);
 
     const [globalState, setGlobalState] = useContext(AppContext);
-    const [state, setState] = useState({ merchants: []})
+    const [state, setState] = useState({ accounts: []})
 
     const logOut = () => {
         setGlobalState(
@@ -26,7 +26,7 @@ const Shop = () => {
         () => {
           // only fetch products if and when the user logs in
           if(globalState.loggedIn === true) {
-            fetch('http://localhost:8080/merchants',{
+            fetch('http://localhost:8080/accounts',{
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${[localStorage.getItem('jwt')]}`
@@ -41,7 +41,7 @@ const Shop = () => {
                 setState(
                   {
                     ...state,
-                    merchants: json.merchants,
+                    accounts: json.accounts,
                   }
                 )
               }
@@ -64,8 +64,8 @@ const Shop = () => {
                             {
                                 globalState.loggedIn === true && 
                                 <Link 
-                                    to="/accounts/profile">
-                                    Profile
+                                    to="/shop">
+                                    Shop
                                 </Link>
                             }   
                         </li>
@@ -90,18 +90,18 @@ const Shop = () => {
 
             <section>
 
-                <h1>Merchants Listing</h1><br/><br/>
+                <h1>Your Profile</h1><br/><br/>
 
                 <div>
                 {
                     globalState.loggedIn === true &&
-                    state.merchants.map(
-                    (merchant)=>
+                    state.accounts.map(
+                    (account)=>
                         <div >
-                        <Listing
-                            name={merchant.brandName}
-                            code={merchant.discountCode}
-                            
+                        <ProfileListing
+                            avatar={account.avatar}
+                            name={account.fullName}
+                            password={account.password}
                         />
                         </div>
                         
@@ -114,6 +114,4 @@ const Shop = () => {
     )
 }
 
-export default Shop;
-
-
+export default Profile;

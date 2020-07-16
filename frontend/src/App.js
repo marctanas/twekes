@@ -6,6 +6,7 @@ import Blog from './Blog';
 import Login from './Login';
 import PasswordRecovery from './PasswordRecovery';
 import Privacy from './Privacy';
+import Profile from './Profile';
 import Shop from './Shop';
 import Signup from './Signup';
 import Terms from './Terms';
@@ -54,6 +55,7 @@ const App = () => {
           <Route path="/accounts/login" exact={true} component={Login}/>
           <Route path="/accounts/passwordrecovery" exact={true} component={PasswordRecovery}/>
           <Route path="/legal/privacy" exact={true} component={Privacy}/>
+          <PrivateRoute path="/accounts/profile" exact={true} component={Profile}/>
           <PrivateRoute path="/shop" exact={true} component={Shop}/>
           <Route path="/legal/terms" exact={true} component={Terms}/>
         </Switch>

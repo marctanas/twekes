@@ -139,6 +139,31 @@ router.post(
     }
 );
 
+
+// A GET route for fetching data from the 'accounts' collection
+router.get(
+    '/',
+    (req, res)=>{
+
+        // Fetch all the documetns using .find()
+        AccountsModel.find()
+
+        //Once the results are ready, use .json() to send the results
+        .then(
+            (results) => {
+                res.json({accounts: results})
+            }
+        )
+        .catch(
+            (e) => {
+                console.log('error eccured', e)
+            }
+        )
+
+    }
+);
+
+
 // POST route to update product
 router.post(
     '/update',
