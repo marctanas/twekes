@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppContext from './AppContext';
+import Listing from './Listing.js';
 import { Link } from 'react-router-dom';
 
 
 const Shop = () => {
 
+    //const [globalState, setGlobalState] = useContext(AppContext);
+
     const [globalState, setGlobalState] = useContext(AppContext);
+    const [state, setState] = useState({ merchants: []})
 
     const logOut = () => {
         setGlobalState(
@@ -17,6 +21,35 @@ const Shop = () => {
 
         localStorage.clear();
     }
+
+    useEffect(
+        () => {
+          // only fetch products if and when the user logs in
+          if(globalState.loggedIn === true) {
+            fetch('http://localhost:8080/merchants',{
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${[localStorage.getItem('jwt')]}`
+            }
+            
+            })
+            .then(
+              (result)=>result.json()
+            )
+            .then (
+              (json)=> {
+                setState(
+                  {
+                    ...state,
+                    merchants: json.merchants,
+                  }
+                )
+              }
+            );
+          }
+        },
+        [ globalState.loggedIn ]
+      )
 
     return (   
         <div>
@@ -47,19 +80,24 @@ const Shop = () => {
             </section>
 
             <section>
-                <div class="coupon">
-                    <div class="container">
-                        <h3>Company Logo</h3>
-                    </div>
-                    <img src="/w3images/hamburger.jpg" alt="Avatar"/>
-                    <div class="container" style={{backgroundColor: `white`}}>
-                        <h2><b>20% OFF YOUR PURCHASE</b></h2> 
-                        <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum, salutandi delicatissimi eam ea. In sed nullam laboramus appellantur, mei ei omnis dolorem mnesarchum.</p>
-                    </div>
-                    <div class="container">
-                        <p>Use Promo Code: <span class="promo">BOH232</span></p>
-                        <p class="expire">Expires: Jan 03, 2021</p>
-                    </div>
+
+                <h1>Merchants Listing</h1><br/><br/>
+
+                <div>
+                {
+                    globalState.loggedIn === true &&
+                    state.merchants.map(
+                    (merchant)=>
+                        <div >
+                        <Listing
+                            name={merchant.brandName}
+                            code={merchant.discountCode}
+                            
+                        />
+                        </div>
+                        
+                    )
+                }
                 </div>
 
             </section>

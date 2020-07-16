@@ -51,7 +51,7 @@ router.get(
         //Once the results are ready, use .json() to send the results
         .then(
             (results) => {
-                res.json(results)
+                res.json({merchants: results})
             }
         )
         .catch(

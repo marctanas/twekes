@@ -10,7 +10,7 @@ const MerchantsSchema = new mongoose.Schema(
             required: true
         },
         discountCode: {
-            type: Array,
+            type: String,
             required: true
         },
     }
