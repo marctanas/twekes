@@ -78,7 +78,11 @@ router.post(
 
         MerchantsModel.findOneAndUpdate(
             { _id: merchantData._id }, // search criteria
-            { brandName: merchantData.brandName, discountCode: merchantData.discountCode, activateBrand: merchantData.activateBrand }, // the keys & values to update
+            {                          // the keys & values to update
+                brandName: merchantData.brandName, 
+                discountCode: merchantData.discountCode, 
+                activateBrand: merchantData.activateBrand 
+            }, 
             {}, // options (if any)
             (err, document) => {
 

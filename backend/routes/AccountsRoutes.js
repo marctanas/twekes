@@ -150,7 +150,7 @@ router.post(
             _id: req.body._id
         };
 
-        console.log(req.body._id);
+        //console.log(req.body._id);
         
         AccountsModel.findOne(
             { _id: userData._id }
@@ -163,14 +163,15 @@ router.post(
             if(userData.fullName !== ""){
                 user.fullName = userData.fullName
             }
+
             if(userData.password !== ""){
                 bcrypt.genSalt(
                     (err, salt) => {
         
                         // Step 2) Generate a hash encrypted password
                         bcrypt.hash(
-                            userData.password,  // first ingredient
-                            salt,  //second ingredient
+                            userData.password,  
+                            salt,
                             (err, hashedPassword) => {
                                 
                                 // Step 3) Replace the original password with hash encrypted password
