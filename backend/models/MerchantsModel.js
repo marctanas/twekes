@@ -13,10 +13,6 @@ const MerchantsSchema = new mongoose.Schema(
             type: Array,
             required: true
         },
-        activateBrand: {
-            type: String,
-            required: true
-        }
     }
 );
 

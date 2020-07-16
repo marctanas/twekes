@@ -15,7 +15,6 @@ router.post(
         const merchantData = {
             brandName: req.body.brandName,
             discountCode: req.body.discountCode,
-            activateBrand: req.body.activateBrand
         };
 
         console.log(
@@ -72,7 +71,6 @@ router.post(
         const merchantData = {
             brandName: req.body.brandName,
             discountCode: req.body.discountCode,
-            activateBrand: req.body.activateBrand,
             _id: req.body._id
         };
 
@@ -81,7 +79,6 @@ router.post(
             {                          // the keys & values to update
                 brandName: merchantData.brandName, 
                 discountCode: merchantData.discountCode, 
-                activateBrand: merchantData.activateBrand 
             }, 
             {}, // options (if any)
             (err, document) => {
