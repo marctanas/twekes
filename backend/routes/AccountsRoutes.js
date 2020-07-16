@@ -10,6 +10,7 @@ const secret = "s3cr3t100";
 
 // import the AccountsModel
 const AccountsModel = require('../models/AccountsModel');
+const { findOne } = require('../models/AccountsModel');
 
 
 // /register
@@ -145,27 +146,45 @@ router.post(
         const userData = {
             avatar: req.body.avatar,
             fullName: req.body.fullName,
+            password: req.body.password,
             _id: req.body._id
         };
 
-        AccountsModel.findOneAndUpdate(
-            { _id: userData._id }, // search criteria
-            { avatar: userData.avatar, fullName: userData.fullName }, // the keys & values to update
-            {}, // options (if any)
-            (err, document) => {
+        console.log(req.body._id);
+        
+        AccountsModel.findOne(
+            { _id: userData._id }
+            ).then((user) =>{
 
-                if(err) {
-                    console.log(err);
-                } else {
-                    res.json(
-                        {
-                            message: 'User Full Name has been updated',
-                            document: document
-                        }
-                    )
-                }
+            if(userData.avatar !== ""){
+                user.avatar = userData.avatar
             }
-        )
+
+            if(userData.fullName !== ""){
+                user.fullName = userData.fullName
+            }
+            if(userData.password !== ""){
+                bcrypt.genSalt(
+                    (err, salt) => {
+        
+                        // Step 2) Generate a hash encrypted password
+                        bcrypt.hash(
+                            userData.password,  // first ingredient
+                            salt,  //second ingredient
+                            (err, hashedPassword) => {
+                                
+                                // Step 3) Replace the original password with hash encrypted password
+                                user.password = hashedPassword;
+                                user.save();
+                            }
+                        )
+                    }
+                );
+            }
+            user.save()
+            res.json({message: 'User data has been updated'})
+            
+        })
     }
 );
 
