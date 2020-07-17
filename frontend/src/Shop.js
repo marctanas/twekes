@@ -64,7 +64,7 @@ const Shop = () => {
                         
                         <li className="loginLink">
                             {
-                                globalState.userAdmin === true &&
+                                globalState.userAdmin === true && globalState.loggedIn === true && 
                                 <Link 
                                     to="/shop/merchants">
                                     Merchants

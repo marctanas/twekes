@@ -3,7 +3,7 @@ import Benefits from './Benefits.js';
 import Footer from './Footer.js';
 import HeroUnit from './HeroUnit.js';
 import HowItWorks from './HowItWorks.js';
-import Merchants from './Merchants.js';
+import SampleMerchants from './SampleMerchants.js';
 import Reviews from './Reviews.js';
 import NavBar from './NavBar.js';
 import WebExtension from './WebExtension.js';
@@ -15,7 +15,7 @@ function Twekes() {
          <HeroUnit />
         <HowItWorks />
         <Benefits />
-        <Merchants />
+        <SampleMerchants />
         <Reviews />
         <WebExtension />
         <Footer />

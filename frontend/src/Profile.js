@@ -71,6 +71,15 @@ const Profile = () => {
                             }   
                         </li>
                         <li className="loginLink">
+                            {
+                                globalState.userAdmin === true && globalState.loggedIn === true && 
+                                <Link 
+                                    to="/shop/merchants">
+                                    Merchants
+                                </Link>
+                            }   
+                        </li>
+                        <li className="loginLink">
                             {   
                                 globalState.loggedIn === true && 
                                 <div onClick={logOut}>
