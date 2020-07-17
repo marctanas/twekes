@@ -14,7 +14,7 @@ const Listing = (prop) => {
     return (
         <div className="container">
             <h3>{prop.name}</h3> 
-            <p>Use Promo Code: <span>{prop.code}</span></p>
+            <p>Promo Code: <span>{prop.code}</span></p>
             <div onClick={activateMerchant}>
                 <Link 
                     className="btn"

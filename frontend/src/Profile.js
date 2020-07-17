@@ -26,7 +26,7 @@ const Profile = () => {
         () => {
           // only fetch products if and when the user logs in
           if(globalState.loggedIn === true) {
-            fetch('http://localhost:8080/accounts',{
+            fetch('http://localhost:8080/accounts/profile',{
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${[localStorage.getItem('jwt')]}`
@@ -38,6 +38,7 @@ const Profile = () => {
             )
             .then (
               (json)=> {
+                  console.log(json)
                 setState(
                   {
                     ...state,
@@ -95,21 +96,16 @@ const Profile = () => {
                 <div>
                 {
                     globalState.loggedIn === true &&
-                    state.accounts.map(
-                    (account)=>
-                        <div >
-                        <ProfileListing
-                            avatar={account.avatar}
-                            name={account.fullName}
-                            password={account.password}
-                        />
-                        </div>
-                        
-                    )
+                    <ProfileListing 
+                        avatar = {state.accounts.avatar} 
+                        name={state.accounts.fullName}
+                        password={state.accounts.password}/>
                 }
                 </div>
 
             </section>
+
+
         </div> 
     )
 }
