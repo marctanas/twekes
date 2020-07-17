@@ -30,8 +30,8 @@ const App = () => {
 
   const [globalState, setGlobalState] = useState({
     loggedIn: localStorage.getItem('jwt') ? true : false,
-    user: null,
-    emailAdmin: "mstanas@hotmail.com"
+    userAdmin: false,
+    emailAdmin: "mstanas@hotmail.com",
 
   });
 

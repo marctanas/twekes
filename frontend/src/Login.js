@@ -35,6 +35,16 @@ const Login = () => {
             .then((json) => {
                 const { message, jsonwebtoken } = json;
                 if (jsonwebtoken) {
+                    if (emailField.value === globalState.emailAdmin){
+                        // update the globalState
+                        setGlobalState({
+                            ...globalState,
+                            userAdmin: true,
+                            loggedIn: true
+                        });
+                        // save the jwt in the browser
+                        localStorage.setItem("jwt", jsonwebtoken);
+                    } else{
                     // update the globalState
                     setGlobalState({
                         ...globalState,
@@ -43,15 +53,19 @@ const Login = () => {
 
                     // save the jwt in the browser
                     localStorage.setItem("jwt", jsonwebtoken);
-                } else {
+                }} else {
                     // throw an error
                     setState({
                         ...state,
                         error: message,
                     });
                 }
+
             });
+
     };
+
+
 
     // If the user is loggedIn, redirect them
     if (globalState.loggedIn === true) {

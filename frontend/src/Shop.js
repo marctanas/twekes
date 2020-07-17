@@ -15,6 +15,7 @@ const Shop = () => {
         setGlobalState(
             {
                 ...globalState,
+                userAdmin: false,
                 loggedIn: false
             }
         );
@@ -60,6 +61,17 @@ const Shop = () => {
                 </Link></h2>
                 <nav>
                     <ul>
+                        
+                        <li className="loginLink">
+                            {
+                                globalState.userAdmin === true &&
+                                <Link 
+                                    to="/shop/merchants">
+                                    Merchants
+                                </Link>
+                            }   
+                        </li>
+
                         <li className="loginLink">
                             {
                                 globalState.loggedIn === true && 
