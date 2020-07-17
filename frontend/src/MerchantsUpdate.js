@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 
-const ProfileListing = (prop) => {
+const MerchantsUpdate = (prop) => {
 
-  let avatarUpdate;
   let nameUpdate;
-  let passwordUpdate;
+  let codeUpdate;
 
-  const updateProfile = () => {
+  const updateMerchant = () => {
 
   //   const [state, setState] = useState(
   //     {
@@ -14,14 +13,13 @@ const ProfileListing = (prop) => {
   //     }
   // );
 
-    fetch('http://localhost:8080/accounts/update', 
+    fetch('http://localhost:8080/merchants/update', 
           {
             method: 'POST',
             body: JSON.stringify(
                 {
-                  avatar: avatarUpdate.value, 
-                  fullName: nameUpdate.value, 
-                  password: passwordUpdate.value
+                  brandName: nameUpdate.value, 
+                  discountCode: codeUpdate.value, 
                 }
             ),
             headers: {
@@ -38,7 +36,7 @@ const ProfileListing = (prop) => {
           (json) => console.log(json),
     )
         
-      alert("Your profile has been updated");
+      alert("Your Merchant has been updated");
   }  
 
   
@@ -46,13 +44,11 @@ const ProfileListing = (prop) => {
   return (
       <div className="container">
         <br></br>
-        <form method="get" onSubmit={updateProfile}>
-          <label htmlFor="fname" placeholder={prop.avatar}>Avatar: </label>
-          <input type="text" placeholder={prop.avatar} ref={(elem) => avatarUpdate = elem}/><br></br><br></br>
-          <label htmlFor="fname" placeholder={prop.name}>Full name: </label>
+        <form method="get" onSubmit={updateMerchant}>
+          <label htmlFor="fname" placeholder={prop.name}>Brand Name: </label>
           <input type="text" placeholder={prop.name} ref={(elem) => nameUpdate = elem}/><br></br><br></br>
-          <label htmlFor="fname" >Password: </label>
-          <input type="text" placeholder="new password" ref={(elem) => passwordUpdate = elem}/><br></br><br></br>
+          <label htmlFor="fname" placeholder={prop.code}>Discount code: </label>
+          <input type="text" placeholder={prop.code} ref={(elem) => codeUpdate = elem}/><br></br><br></br>
           <button>Update</button><br></br><br></br>
         </form>
 
@@ -60,4 +56,4 @@ const ProfileListing = (prop) => {
     )
 }
 
-export default ProfileListing;
+export default MerchantsUpdate;

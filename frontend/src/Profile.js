@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
 
-    //const [globalState, setGlobalState] = useContext(AppContext);
 
     const [globalState, setGlobalState] = useContext(AppContext);
     const [state, setState] = useState({ accounts: []})
@@ -15,6 +14,7 @@ const Profile = () => {
         setGlobalState(
             {
                 ...globalState,
+                userAdmin: false,
                 loggedIn: false
             }
         );
@@ -24,7 +24,7 @@ const Profile = () => {
 
     useEffect(
         () => {
-          // only fetch products if and when the user logs in
+          // only fetch profile if and when the user logs in
           if(globalState.loggedIn === true) {
             fetch('http://localhost:8080/accounts/profile',{
             headers: {
@@ -38,7 +38,6 @@ const Profile = () => {
             )
             .then (
               (json)=> {
-                  console.log(json)
                 setState(
                   {
                     ...state,

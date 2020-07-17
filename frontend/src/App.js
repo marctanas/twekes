@@ -4,6 +4,7 @@ import AppContext from './AppContext';
 import About from './About';
 import Blog from './Blog';
 import Login from './Login';
+import Merchants from './Merchants';
 import PasswordRecovery from './PasswordRecovery';
 import Privacy from './Privacy';
 import Profile from './Profile';
@@ -57,6 +58,7 @@ const App = () => {
           <Route path="/legal/privacy" exact={true} component={Privacy}/>
           <PrivateRoute path="/accounts/profile" exact={true} component={Profile}/>
           <PrivateRoute path="/shop" exact={true} component={Shop}/>
+          <PrivateRoute path="/shop/merchants" exact={true} component={Merchants}/>
           <Route path="/legal/terms" exact={true} component={Terms}/>
         </Switch>
       </BrowserRouter>
