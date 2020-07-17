@@ -73,7 +73,7 @@ router.post(
             discountCode: req.body.discountCode,
             _id: req.body._id
         };
-
+        
         MerchantsModel.findOneAndUpdate(
             { _id: merchantData._id }, // search criteria
             {                          // the keys & values to update
