@@ -23,34 +23,35 @@ const Merchants = () => {
         localStorage.clear();
     }
 
-    // useEffect(
-    //     () => {
-    //       // only fetch products if and when the user logs in
-    //       if(globalState.loggedIn === true) {
-    //         fetch('http://localhost:8080/merchants/',{
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Authorization": `Bearer ${[localStorage.getItem('jwt')]}`
-    //         }
+    useEffect(
+        () => {
+          // only fetch products if and when the user logs in
+          if(globalState.loggedIn === true) {
+            fetch('http://localhost:8080/merchants/',{
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${[localStorage.getItem('jwt')]}`
+            }
             
-    //         })
-    //         .then(
-    //           (result)=>result.json()
-    //         )
-    //         .then (
-    //           (json)=> {
-    //             setState(
-    //               {
-    //                 ...state,
-    //                 accounts: json.accounts,
-    //               }
-    //             )
-    //           }
-    //         );
-    //       }
-    //     },
-    //     [ globalState.loggedIn ]
-    //   )
+            })
+            .then(
+              (result)=>result.json()
+            )
+            .then (
+              (json)=> {
+                setState(
+                  {
+                    ...state,
+                    merchants: json.merchants,
+                  }
+                )
+              }
+            );
+          }
+        },
+        [ globalState.loggedIn ],
+        console.log(state.merchants)
+      )
 
     return (   
         <div>
@@ -98,36 +99,39 @@ const Merchants = () => {
                 <div className="background-image" > </div>
             </section>
             {   
-            globalState.userAdmin === true && 
-            <div>
-                <section>
+                globalState.userAdmin === true && 
+                <div>
+                    <section>
 
-                <h1>Create Merchant</h1><br/><br/>
+                    <h1>Create Merchant</h1><br/><br/>
 
-                <MerchantsCreate/>
+                    <MerchantsCreate/>
 
-                </section>
+                    </section>
 
-                <section>
+                    <section>
 
-                    <h1>Merchant Update</h1><br/><br/>
+                        <h1>Merchant Update</h1><br/><br/>
 
-                    <div>
-                    {
-                        globalState.loggedIn === true &&
-                        state.merchants.map(
+                        <div>
+                        {
+                            globalState.loggedIn === true &&
+                            state.merchants.map(
                             (merchant)=>
                                 <div >
-                                    <MerchantsUpdate 
-                                        name = {merchant.brandName} 
-                                        code ={merchant.discountCode}
-                                    />
+                                <MerchantsUpdate
+                                    id={merchant._id}
+                                    name={merchant.brandName}
+                                    code={merchant.discountCode}
+                                    
+                                />
                                 </div>
-                        )   
-                    }
-                    </div>
-                </section>
-            </div>
+                                
+                            )
+                        }
+                        </div>
+                    </section>
+                </div>
             }
             {
                 globalState.userAdmin === false && 

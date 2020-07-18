@@ -48,7 +48,8 @@ const Profile = () => {
             );
           }
         },
-        [ globalState.loggedIn ]
+        [ globalState.loggedIn ],
+        console.log(globalState.userAdmin)
       )
 
     return (   

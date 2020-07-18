@@ -6,7 +6,9 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 
 const jwt = require('jsonwebtoken');
-const secret = "s3cr3t100";
+
+require('dotenv').config()
+const secret = process.env.SECRET;
 
 // import the AccountsModel
 const AccountsModel = require('../models/AccountsModel');

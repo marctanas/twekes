@@ -8,6 +8,9 @@ const mongoose = require('mongoose');
 //Import body-parser
 const bodyParser = require('body-parser');
 
+// Import dotenv
+require('dotenv').config()
+
 // Import passport
 const passport = require('passport');
 // Import the strategies & way to extract the jsonwebtoken
@@ -20,7 +23,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 
 // The same secret in routes/AccountsRoutes will be needed to read the jsonwebtoken
-const secret = "s3cr3t100";
+const secret = process.env.SECRET;
 
 // We need the AccountsModel to find the user in the database
 const AccountsModel = require('./models/AccountsModel');
@@ -75,7 +78,7 @@ passportJwt(passport);
 
 
 //Enter database connection URL from mongoDB
-const dbURL = "mongodb+srv://marc:z9has6Pp@cluster0-kmonh.mongodb.net/twekes?retryWrites=true&w=majority";
+const dbURL = process.env.DB_URL;
 
 mongoose.connect(
     dbURL,
@@ -261,7 +264,7 @@ server.get(
 // Connect to port (range 3000 - 9999)
 // http://127.0.0.1:8080 (aka http://localhost:8080)  this is on local machine
 server.listen( 
-    8080, ()=>{
+    process.env.PORT || 8080, ()=>{
         console.log('You are connected to Localhost http://127.0.0.1:8080');
     }
 )

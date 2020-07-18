@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 const MerchantsUpdate = (prop) => {
 
+  let idUpdate;
   let nameUpdate;
   let codeUpdate;
 
@@ -18,6 +19,7 @@ const MerchantsUpdate = (prop) => {
             method: 'POST',
             body: JSON.stringify(
                 {
+                  _id: idUpdate.value,
                   brandName: nameUpdate.value, 
                   discountCode: codeUpdate.value, 
                 }
@@ -36,7 +38,7 @@ const MerchantsUpdate = (prop) => {
           (json) => console.log(json),
     )
         
-      alert("Your Merchant has been updated");
+      alert(prop.name , "Merchant has been updated");
   }  
 
   
@@ -45,6 +47,8 @@ const MerchantsUpdate = (prop) => {
       <div className="container">
         <br></br>
         <form method="get" onSubmit={updateMerchant}>
+          <label htmlFor="fname" placeholder={prop.id} ref={(elem) => idUpdate = elem}>Object ID: </label>
+          <input type="text" placeholder={prop.name} ref={(elem) => nameUpdate = elem}/><br></br><br></br>
           <label htmlFor="fname" placeholder={prop.name}>Brand Name: </label>
           <input type="text" placeholder={prop.name} ref={(elem) => nameUpdate = elem}/><br></br><br></br>
           <label htmlFor="fname" placeholder={prop.code}>Discount code: </label>
